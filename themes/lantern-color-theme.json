@@ -11,8 +11,8 @@
     "editor.selectionBackground": "#ffffff26",
     "editor.selectionHighlightBackground": "#ffffff1a",
     "editor.wordHighlightBackground": "#ffffff1a",
-    "editor.findMatchBackground": "#a99ce866",
-    "editor.findMatchHighlightBackground": "#a99ce82e",
+    "editor.findMatchBackground": "#ffffff38",
+    "editor.findMatchHighlightBackground": "#ffffff14",
     "editorLineNumber.foreground": "#5b595c",
     "editorLineNumber.activeForeground": "#c1c0c0",
     "editorIndentGuide.background1": "#1c1c1c",
@@ -86,7 +86,7 @@
     "terminal.ansiBlack": "#4a4a4a",
     "terminal.ansiRed": "#f0708f",
     "terminal.ansiGreen": "#a3d27a",
-    "terminal.ansiYellow": "#e8cc72",
+    "terminal.ansiYellow": "#d4b866",
     "terminal.ansiBlue": "#8cb4e8",
     "terminal.ansiMagenta": "#a99ce8",
     "terminal.ansiCyan": "#7ccfdb",
@@ -94,7 +94,7 @@
     "terminal.ansiBrightBlack": "#727072",
     "terminal.ansiBrightRed": "#f0708f",
     "terminal.ansiBrightGreen": "#a3d27a",
-    "terminal.ansiBrightYellow": "#e8cc72",
+    "terminal.ansiBrightYellow": "#d4b866",
     "terminal.ansiBrightBlue": "#a3c4ee",
     "terminal.ansiBrightMagenta": "#a99ce8",
     "terminal.ansiBrightCyan": "#7ccfdb",
@@ -134,12 +134,15 @@
     "textLink.foreground": "#7ccfdb",
     "textLink.activeForeground": "#7ccfdb",
     "widget.shadow": "#00000080",
-    "editorBracketHighlight.foreground1": "#e8cc72",
-    "editorBracketHighlight.foreground2": "#a99ce8",
-    "editorBracketHighlight.foreground3": "#7ccfdb",
-    "editorBracketHighlight.foreground4": "#a3d27a",
-    "editorBracketHighlight.foreground5": "#f09a6e",
-    "editorBracketHighlight.foreground6": "#f0708f"
+    "editorBracketHighlight.foreground1": "#9c8a55",
+    "editorBracketHighlight.foreground2": "#7d74ad",
+    "editorBracketHighlight.foreground3": "#5f9aa3",
+    "editorBracketHighlight.foreground4": "#7a9a5d",
+    "editorBracketHighlight.foreground5": "#b07658",
+    "editorBracketHighlight.foreground6": "#b0586d",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff5f6d",
+    "editor.findMatchBorder": "#f2f2ef",
+    "editor.findMatchHighlightBorder": "#ffffff40"
   },
   "semanticTokenColors": {
     "parameter": {
@@ -178,15 +181,17 @@
       }
     },
     {
-      "name": "CONTROL (pink-red): keywords that change the flow - if, return, import, operators",
+      "name": "CONTROL (pink): words that change the flow - if, return, raise, import, and/or/not",
       "scope": [
         "keyword",
         "keyword.control",
-        "keyword.operator",
         "storage.modifier",
         "keyword.operator.new",
         "entity.name.tag",
-        "punctuation.definition.tag"
+        "punctuation.definition.tag",
+        "keyword.operator.logical",
+        "keyword.operator.expression",
+        "keyword.operator.word"
       ],
       "settings": {
         "foreground": "#f0708f"
@@ -202,7 +207,7 @@
         "entity.name.section"
       ],
       "settings": {
-        "foreground": "#e8cc72"
+        "foreground": "#d4b866"
       }
     },
     {
@@ -252,14 +257,26 @@
       }
     },
     {
-      "name": "DEFINE WORDS (cyan, italic): def, class, function",
+      "name": "STORAGE TYPES (cyan, italic): let, const, var and similar",
       "scope": [
-        "storage.type",
-        "storage.type.function",
-        "storage.type.class"
+        "storage.type"
       ],
       "settings": {
         "foreground": "#7ccfdb",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "DEFINE WORDS (pink, italic): def, class, function",
+      "scope": [
+        "storage.type.function",
+        "storage.type.class",
+        "storage.type.function.arrow",
+        "keyword.declaration.function",
+        "keyword.declaration.class"
+      ],
+      "settings": {
+        "foreground": "#f0708f",
         "fontStyle": "italic"
       }
     },
@@ -302,12 +319,17 @@
       }
     },
     {
-      "name": "GLUE (dim): brackets, commas, dots",
+      "name": "GLUE (dim): brackets, commas, dots, and operators like = + < *",
       "scope": [
         "punctuation",
         "meta.brace",
         "punctuation.separator",
-        "punctuation.terminator"
+        "punctuation.terminator",
+        "keyword.operator",
+        "keyword.operator.assignment",
+        "keyword.operator.arithmetic",
+        "keyword.operator.comparison",
+        "keyword.operator.relational"
       ],
       "settings": {
         "foreground": "#939293"
@@ -339,6 +361,18 @@
       "name": "DELETED LINES (pink)",
       "scope": [
         "markup.deleted"
+      ],
+      "settings": {
+        "foreground": "#f0708f"
+      }
+    },
+    {
+      "name": "CONTROL WORD-OPERATORS (pink): and, or, not, in, is, typeof, new",
+      "scope": [
+        "keyword.operator.logical",
+        "keyword.operator.expression",
+        "keyword.operator.word",
+        "keyword.operator.new"
       ],
       "settings": {
         "foreground": "#f0708f"

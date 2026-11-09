@@ -13,20 +13,20 @@ code by its colour alone.
 ## What each colour means
 | Colour | Hex | Meaning | Examples |
 |---|---|---|---|
-| Soft pink | `#f0708f` | Control: words that change the flow | `if`, `return`, `import`, `=`, `+` |
-| Soft gold | `#e8cc72` | Text data | `"hello"` |
+| Soft pink | `#f0708f` | Control: words that change the flow | `if`, `return`, `raise`, `import`, `and`, `not` |
+| Soft gold | `#d4b866` | Text data (a little quieter than names, so data never hides logic) | `"hello"` |
 | Lavender | `#a99ce8` | Fixed values | `42`, `True`, `None`, constants |
 | Green | `#a3d27a` | Actions: functions and methods | `print()`, `save()` |
 | Cyan | `#7ccfdb` | Shapes: types and classes | `str`, `List`, `User` |
-| Cyan italic | `#7ccfdb` | Define words | `def`, `class`, `function` |
+| Pink italic | `#f0708f` | Define words (quiet, so the name after them stands out) | `def`, `class`, `function` |
 | Orange italic | `#f09a6e` | Inputs: function parameters | `def f(name, age)` |
 | Off-white | `#e6e6e3` | Plain names: variables, properties | `total`, `user.email` |
 | Grey italic | `#807e81` | Notes for humans: comments | `# todo` |
-| Dim grey | `#939293` | Glue: brackets, commas, dots | `( ) , .` |
+| Dim grey | `#939293` | Glue: brackets, commas, dots, operators | `( ) , .` `=` `+` `<` |
 | Red underline | `#ff5f6d` | Danger: invalid code (a stronger red than keywords) | |
 
 The interface follows the same meanings: errors are red, deleted files pink, warnings orange, new files green, changed
-files orange. The interface accent is soft white, so gold always means text data. Terminal blue is a real soft blue (`#8cb4e8`). Nested brackets each get their own colour.
+files orange. The interface accent is soft white, so gold always means text data. Terminal blue is a real soft blue (`#8cb4e8`). Nested brackets each get their own dim tint, so pairs are easy to match but stay in the background.
 
 ## Install
 **From source**
