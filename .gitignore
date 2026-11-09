@@ -1,0 +1,9 @@
+# packaged extension
+*.vsix
+# tooling
+node_modules/
+.vscode-test/
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+*.log

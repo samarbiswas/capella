@@ -1,0 +1,11 @@
+#!/bin/sh
+# Enforce "<type>: <description>" (Conventional Commits). Optional scope: "fix(ui): ...". "!" marks a breaking change.
+first=$(head -n1 "$1")
+case "$first" in Merge*|Revert*|fixup!*|squash!*) exit 0;; esac
+if ! printf '%s' "$first" | grep -Eq '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9-]+\))?!?: [^ ].{0,71}$'; then
+  echo "commit-msg: first line must be '<type>: <description>' (max 72 chars)." >&2
+  echo "  types: feat fix docs style refactor perf test build ci chore revert" >&2
+  echo "  example: fix: raise contrast of inactive tabs" >&2
+  echo "  yours:   $first" >&2
+  exit 1
+fi

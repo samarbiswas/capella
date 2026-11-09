@@ -1,0 +1,5 @@
+#!/bin/sh
+# Every staged JSON file must be valid JSON.
+for f in $(git diff --cached --name-only --diff-filter=ACM -- '*.json'); do
+  python3 -m json.tool "$f" >/dev/null 2>&1 || { echo "pre-commit: invalid JSON in $f" >&2; exit 1; }
+done
