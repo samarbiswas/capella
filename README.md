@@ -23,10 +23,10 @@ code by its colour alone.
 | Off-white | `#e6e6e3` | Plain names: variables, properties | `total`, `user.email` |
 | Grey italic | `#807e81` | Notes for humans: comments | `# todo` |
 | Dim grey | `#939293` | Glue: brackets, commas, dots | `( ) , .` |
-| Pink underline | `#f0708f` | Danger: invalid code, deleted lines | |
+| Red underline | `#ff5f6d` | Danger: invalid code (a stronger red than keywords) | |
 
-The interface follows the same meanings: errors are pink, warnings orange, new files green, changed
-files orange. Nested brackets each get their own colour.
+The interface follows the same meanings: errors are red, deleted files pink, warnings orange, new files green, changed
+files orange. The interface accent is soft white, so gold always means text data. Terminal blue is a real soft blue (`#8cb4e8`). Nested brackets each get their own colour.
 
 ## Install
 **From source**
