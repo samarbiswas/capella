@@ -1,0 +1,20 @@
+{
+  "name": "lantern",
+  "displayName": "Lantern",
+  "description": "A pitch-black, eye-friendly dark theme where every colour has a meaning",
+  "version": "1.0.0",
+  "publisher": "samarbiswas",
+  "license": "MIT",
+  "engines": { "vscode": "^1.70.0" },
+  "categories": ["Themes"],
+  "keywords": ["theme", "dark", "black", "oled", "eye-friendly"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Lantern",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lantern-color-theme.json"
+      }
+    ]
+  }
+}
