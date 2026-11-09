@@ -65,7 +65,7 @@ Install the font, then add this to your VS Code `settings.json`:
 ```
 npm install -g @vscode/vsce
 vsce package
-code --install-extension lantern-1.0.0.vsix
+code --install-extension lantern-1.1.0.vsix
 ```
 
 ## Contributing
