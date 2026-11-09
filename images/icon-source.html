@@ -1,31 +1,30 @@
 <!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:transparent}svg{display:block}</style></head><body>
+<!-- Capella icon source: open in Chrome and screenshot at 128x128 to make icon.png -->
 <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="glow" cx="64" cy="74" r="44" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#d4b866" stop-opacity=".55"/>
-      <stop offset=".55" stop-color="#d4b866" stop-opacity=".12"/>
+    <radialGradient id="halo" cx="64" cy="64" r="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e8cc72" stop-opacity=".6"/>
+      <stop offset=".35" stop-color="#d4b866" stop-opacity=".18"/>
       <stop offset="1" stop-color="#d4b866" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="flame" cx="64" cy="78" r="13" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f2f2ef"/>
-      <stop offset=".45" stop-color="#e8cc72"/>
-      <stop offset="1" stop-color="#d4b866" stop-opacity=".2"/>
+    <radialGradient id="core" cx="64" cy="64" r="9" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#f2f2ef"/>
+      <stop offset="1" stop-color="#e8cc72"/>
     </radialGradient>
   </defs>
   <rect width="128" height="128" rx="26" fill="#000"/>
   <rect x=".75" y=".75" width="126.5" height="126.5" rx="25.5" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
-  <circle cx="64" cy="74" r="44" fill="url(#glow)"/>
-  <!-- handle -->
-  <path d="M52 34 Q52 20 64 20 Q76 20 76 34" fill="none" stroke="#939293" stroke-width="4" stroke-linecap="round"/>
-  <!-- cap -->
-  <rect x="46" y="33" width="36" height="8" rx="3" fill="#939293"/>
-  <!-- glass -->
-  <path d="M48 41 L80 41 L86 98 L42 98 Z" fill="#0a0a0a" fill-opacity=".55" stroke="#d4b866" stroke-width="3" stroke-linejoin="round"/>
-  <!-- flame -->
-  <path d="M64 62 C71 71 72 80 64 88 C56 80 57 71 64 62 Z" fill="url(#flame)"/>
-  <!-- bars, in the theme's meaning colours -->
-  <line x1="56" y1="44" x2="53" y2="96" stroke="#a3d27a" stroke-width="2" stroke-opacity=".8"/>
-  <line x1="72" y1="44" x2="75" y2="96" stroke="#7ccfdb" stroke-width="2" stroke-opacity=".8"/>
-  <!-- base -->
-  <rect x="40" y="98" width="48" height="8" rx="3" fill="#939293"/>
+  <!-- faint background stars in the theme colours -->
+  <circle cx="26" cy="30" r="1.6" fill="#7ccfdb" opacity=".7"/>
+  <circle cx="100" cy="24" r="1.3" fill="#a99ce8" opacity=".7"/>
+  <circle cx="104" cy="98" r="1.6" fill="#a3d27a" opacity=".6"/>
+  <circle cx="22" cy="96" r="1.2" fill="#f0708f" opacity=".6"/>
+  <circle cx="88" cy="50" r="1" fill="#f2f2ef" opacity=".5"/>
+  <!-- glow -->
+  <circle cx="64" cy="64" r="52" fill="url(#halo)"/>
+  <!-- soft four-point star -->
+  <path d="M64 22 C66 50 78 62 106 64 C78 66 66 78 64 106 C62 78 50 66 22 64 C50 62 62 50 64 22 Z" fill="#e8cc72" opacity=".9"/>
+  <path d="M64 40 C65 56 72 63 88 64 C72 65 65 72 64 88 C63 72 56 65 40 64 C56 63 63 56 64 40 Z" fill="#f2f2ef" opacity=".55" transform="rotate(45 64 64)"/>
+  <circle cx="64" cy="64" r="9" fill="url(#core)"/>
 </svg></body></html>
