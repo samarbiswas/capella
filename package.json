@@ -1,8 +1,8 @@
 {
   "name": "capella",
   "displayName": "Capella",
-  "description": "A pitch-black, eye-friendly dark theme where every colour has a meaning",
-  "version": "1.1.0",
+  "description": "A pitch-black, eye-friendly dark theme where every colour has a meaning, with a settings panel to tune it",
+  "version": "1.2.0",
   "publisher": "samarbiswas",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -10,9 +10,11 @@
   "repository": { "type": "git", "url": "https://github.com/samarbiswas/capella.git" },
   "bugs": { "url": "https://github.com/samarbiswas/capella/issues" },
   "homepage": "https://github.com/samarbiswas/capella#readme",
-  "engines": { "vscode": "^1.70.0" },
-  "categories": ["Themes"],
+  "engines": { "vscode": "^1.74.0" },
+  "categories": ["Themes", "Other"],
   "keywords": ["theme", "dark", "black", "oled", "eye-friendly"],
+  "main": "./extension.js",
+  "activationEvents": ["onView:capella.panel", "onCommand:capella.openPanel"],
   "contributes": {
     "themes": [
       {
@@ -20,6 +22,19 @@
         "uiTheme": "vs-dark",
         "path": "./themes/capella-color-theme.json"
       }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "capella", "title": "Capella", "icon": "images/sidebar-star.svg" }
+      ]
+    },
+    "views": {
+      "capella": [
+        { "type": "webview", "id": "capella.panel", "name": "Settings" }
+      ]
+    },
+    "commands": [
+      { "command": "capella.openPanel", "title": "Open Settings", "category": "Capella" }
     ]
   }
 }

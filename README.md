@@ -30,6 +30,16 @@ code by its colour alone.
 The interface follows the same meanings: errors are red, deleted files pink, warnings orange, new files green, changed
 files orange. The interface accent is soft white, so gold always means text data. Terminal blue is a real soft blue (`#8cb4e8`). Nested brackets each get their own dim tint, so pairs are easy to match but stay in the background. Diffs and merge conflicts use the same soft green (added) and pink (removed). In Markdown, headings are soft white and bold, and bold text is simply bold.
 
+## The Capella panel
+Click the **star icon** in the left sidebar to open the Capella settings window.
+
+- **Theme:** a slider for how black the background is, from pure black `#000000` (best on OLED screens and in dark
+  rooms) to soft charcoal `#1a1a1a`. Panels stay one step lighter. Click **Apply** to save it, **Reset** to undo.
+  It only changes Capella (saved in your user settings under `workbench.colorCustomizations` → `[Capella]`), never
+  your other themes, and it keeps any other Capella colours you set yourself. Reset puts back the background
+  colours you had before Capella first changed them. Workspace settings can override your user settings.
+- Coming next: fonts (1.3), a minimal agentic workspace starter (1.4), and file icons (1.5).
+
 ## Recommended fonts
 A colour theme cannot choose your font, so pick one yourself. Capella uses italic to carry meaning (comments, inputs,
 `def` / `let`), so it looks best with a font that has a real, designed italic. All of these are free:
