@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:transparent}svg{display:block}</style></head><body>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="64" cy="74" r="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d4b866" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#d4b866" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#d4b866" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="flame" cx="64" cy="78" r="13" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f2f2ef"/>
+      <stop offset=".45" stop-color="#e8cc72"/>
+      <stop offset="1" stop-color="#d4b866" stop-opacity=".2"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" rx="26" fill="#000"/>
+  <rect x=".75" y=".75" width="126.5" height="126.5" rx="25.5" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="64" cy="74" r="44" fill="url(#glow)"/>
+  <!-- handle -->
+  <path d="M52 34 Q52 20 64 20 Q76 20 76 34" fill="none" stroke="#939293" stroke-width="4" stroke-linecap="round"/>
+  <!-- cap -->
+  <rect x="46" y="33" width="36" height="8" rx="3" fill="#939293"/>
+  <!-- glass -->
+  <path d="M48 41 L80 41 L86 98 L42 98 Z" fill="#0a0a0a" fill-opacity=".55" stroke="#d4b866" stroke-width="3" stroke-linejoin="round"/>
+  <!-- flame -->
+  <path d="M64 62 C71 71 72 80 64 88 C56 80 57 71 64 62 Z" fill="url(#flame)"/>
+  <!-- bars, in the theme's meaning colours -->
+  <line x1="56" y1="44" x2="53" y2="96" stroke="#a3d27a" stroke-width="2" stroke-opacity=".8"/>
+  <line x1="72" y1="44" x2="75" y2="96" stroke="#7ccfdb" stroke-width="2" stroke-opacity=".8"/>
+  <!-- base -->
+  <rect x="40" y="98" width="48" height="8" rx="3" fill="#939293"/>
+</svg></body></html>

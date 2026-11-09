@@ -1,5 +1,7 @@
 # Lantern
 
+<img src="images/icon.png" width="96" alt="Lantern icon">
+
 A pitch-black dark theme for VS Code that is easy on the eyes: soft lights in the dark. Every colour has a meaning, so you can read
 code by its colour alone.
 
@@ -28,12 +30,34 @@ code by its colour alone.
 The interface follows the same meanings: errors are red, deleted files pink, warnings orange, new files green, changed
 files orange. The interface accent is soft white, so gold always means text data. Terminal blue is a real soft blue (`#8cb4e8`). Nested brackets each get their own dim tint, so pairs are easy to match but stay in the background. Diffs and merge conflicts use the same soft green (added) and pink (removed). In Markdown, headings are soft white and bold, and bold text is simply bold.
 
+## Recommended fonts
+A colour theme cannot choose your font, so pick one yourself. Lantern uses italic to carry meaning (comments, inputs,
+`def` / `let`), so it looks best with a font that has a real, designed italic. All of these are free:
+
+| Font | Why it suits Lantern |
+|---|---|
+| [Cascadia Code](https://github.com/microsoft/cascadia-code) | Clean, with a handwriting-style italic made for code |
+| [Victor Mono](https://rubjo.github.io/victor-mono/) | A very clear cursive italic; thin and calm on black |
+| [Monaspace](https://monaspace.githubnext.com/) | A family of five styles; use one for code and another for italics |
+| [JetBrains Mono](https://www.jetbrains.com/lp/mono/) | Very readable; its italic is only slanted, so less distinct |
+
+Install the font, then add this to your VS Code `settings.json`:
+
+```json
+"editor.fontFamily": "'Cascadia Code', Menlo, Consolas, monospace",
+"editor.fontLigatures": true,
+"editor.fontSize": 14,
+"editor.lineHeight": 1.6
+```
+
+`fontLigatures` joins symbols such as `->` and `!=` into one shape. Turn it off if you prefer to see each character.
+
 ## Install
 **From source**
 1. Download or clone this repository.
 2. Copy the folder to your VS Code extensions folder:
-   - macOS / Linux: `~/.vscode/extensions/lantern`
-   - Windows: `%USERPROFILE%\.vscode\extensions\lantern`
+   - macOS / Linux: `~/.vscode/extensions/samarbiswas.lantern`
+   - Windows: `%USERPROFILE%\.vscode\extensions\samarbiswas.lantern`
 3. Restart VS Code.
 4. Press `Cmd+K Cmd+T` (macOS) or `Ctrl+K Ctrl+T` (Windows / Linux) and choose **Lantern**.
 
