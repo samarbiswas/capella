@@ -8,25 +8,25 @@ code by its colour alone.
 - **Soft colours.** Each colour is slightly toned down so nothing glows or glares on black.
 - **Off-white text** (`#e6e6e3`) instead of pure white, for less eye strain in long sessions.
 - **Panels one step lighter** (`#0a0a0a`) so the editor stands out.
-- **Italic only where it helps:** comments, function inputs, and the words `def` / `class` / `function`.
+- **Italic only where it helps:** comments, function inputs, and declaring words such as `def`, `class`, `let`, `const`.
 
 ## What each colour means
 | Colour | Hex | Meaning | Examples |
 |---|---|---|---|
 | Soft pink | `#f0708f` | Control: words that change the flow | `if`, `return`, `raise`, `import`, `and`, `not` |
 | Soft gold | `#d4b866` | Text data (a little quieter than names, so data never hides logic) | `"hello"` |
-| Lavender | `#a99ce8` | Fixed values | `42`, `True`, `None`, constants |
+| Lavender | `#a99ce8` | Fixed values | `42`, `True`, `None`, `Math.PI`, enum members |
 | Green | `#a3d27a` | Actions: functions and methods | `print()`, `save()` |
 | Cyan | `#7ccfdb` | Shapes: types and classes | `str`, `List`, `User` |
-| Pink italic | `#f0708f` | Define words (quiet, so the name after them stands out) | `def`, `class`, `function` |
+| Pink italic | `#f0708f` | Define words (quiet, so the name after them stands out) | `def`, `class`, `function`, `let`, `const`, `interface` |
 | Orange italic | `#f09a6e` | Inputs: function parameters | `def f(name, age)` |
-| Off-white | `#e6e6e3` | Plain names: variables, properties | `total`, `user.email` |
+| Off-white | `#e6e6e3` | Plain names: variables, `const` names, properties, HTML attributes, CSS properties, YAML keys | `total`, `user.email`, `href` |
 | Grey italic | `#807e81` | Notes for humans: comments | `# todo` |
 | Dim grey | `#939293` | Glue: brackets, commas, dots, operators | `( ) , .` `=` `+` `<` |
 | Red underline | `#ff5f6d` | Danger: invalid code (a stronger red than keywords) | |
 
 The interface follows the same meanings: errors are red, deleted files pink, warnings orange, new files green, changed
-files orange. The interface accent is soft white, so gold always means text data. Terminal blue is a real soft blue (`#8cb4e8`). Nested brackets each get their own dim tint, so pairs are easy to match but stay in the background.
+files orange. The interface accent is soft white, so gold always means text data. Terminal blue is a real soft blue (`#8cb4e8`). Nested brackets each get their own dim tint, so pairs are easy to match but stay in the background. Diffs and merge conflicts use the same soft green (added) and pink (removed). In Markdown, headings are soft white and bold, and bold text is simply bold.
 
 ## Install
 **From source**
