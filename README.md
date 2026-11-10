@@ -33,7 +33,16 @@ files orange. The interface accent is soft white, so gold always means text data
 ## The Capella panel
 Click the **star icon** in the left sidebar to open the Capella settings window.
 
-- Coming next: fonts (1.3) and file icons (1.4).
+- **Fonts and Readability:**
+  - **Font:** installs Cascadia Code or JetBrains Mono with one click. The files come only from Google Fonts'
+    official GitHub, pinned to one exact version, and each file's size and fingerprint is checked before it is
+    saved. Existing font files are never overwritten. Automatic install works on macOS and Linux.
+  - **Use:** sets the font for the editor and the terminal, with ligatures.
+  - **Reading comfort:** Compact, Comfortable or Spacious. Each sets text size, line spacing and letter spacing.
+  - **Calm view:** hides the minimap, inline hints, breadcrumbs and indent lines.
+  - **Undo:** puts your old settings back, and keeps anything you changed yourself since.
+  - Every change shows exactly which settings it will change and asks first.
+- Coming next: file icons (1.4).
 
 ## Recommended fonts
 A colour theme cannot choose your font, so pick one yourself. Capella uses italic to carry meaning (comments, inputs,

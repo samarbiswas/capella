@@ -6,14 +6,18 @@ const vscode = require('vscode');
 const { CapellaPanel } = require('./panel/panel');
 
 // Fixed list (no dynamic loading), so only reviewed code can run.
-const FEATURES = [];
+const FEATURES = [require('./features/fonts')];
 
 function activate(context) {
   const panel = new CapellaPanel(context, FEATURES);
+  const watched = FEATURES.flatMap((f) => f.watches || []);
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider('capella.panel', panel),
     vscode.commands.registerCommand('capella.openPanel', () =>
       vscode.commands.executeCommand('workbench.view.extension.capella')),
+    vscode.workspace.onDidChangeConfiguration((e) => {
+      if (watched.some((k) => e.affectsConfiguration(k))) panel.sendState();
+    }),
   );
 }
 
