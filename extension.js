@@ -6,7 +6,7 @@ const vscode = require('vscode');
 const { CapellaPanel } = require('./panel/panel');
 
 // Fixed list (no dynamic loading), so only reviewed code can run.
-const FEATURES = [require('./features/theme-black')];
+const FEATURES = [];
 
 function activate(context) {
   const panel = new CapellaPanel(context, FEATURES);
@@ -14,11 +14,6 @@ function activate(context) {
     vscode.window.registerWebviewViewProvider('capella.panel', panel),
     vscode.commands.registerCommand('capella.openPanel', () =>
       vscode.commands.executeCommand('workbench.view.extension.capella')),
-    vscode.workspace.onDidChangeConfiguration((e) => {
-      if (e.affectsConfiguration('workbench.colorCustomizations') || e.affectsConfiguration('workbench.colorTheme')) {
-        panel.sendState();
-      }
-    }),
   );
 }
 
