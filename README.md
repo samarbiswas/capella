@@ -6,10 +6,10 @@ A deep, near-black dark theme for VS Code that is easy on the eyes: named after 
 code by its colour alone.
 
 ## Why this theme
-- **Soft charcoal editor** (`#1a1a1a`), a little grey so it is calm on the eyes and clearly separate from the panels.
+- **Soft charcoal editor** (`#2a2a2a`), a soft mid-grey so it is calm on the eyes and clearly separate from the panels.
 - **Lively but calm colours.** Each colour is bright enough to feel energetic, but none of them glare.
 - **Off-white text** (`#e6e6e3`) instead of pure white, for less eye strain in long sessions.
-- **Darker panels** (`#0f0f0f`) with visible edges (`#333333`), so you always see where the editor and each panel end.
+- **Darker side panels** (`#141414`), the darkest terminal (`#0a0a0a`) and visible edges (`#383838`), so you always see where the editor and each panel end.
 - **Italic only where it helps:** comments, function inputs, and declaring words such as `def`, `class`, `let`, `const`.
 
 ## What each colour means
